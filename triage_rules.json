@@ -1,0 +1,27 @@
+{
+    "symptom_weights": {
+        "fever": 3.0,
+        "shortness_of_breath": 5.0,
+        "chest_pain": 6.0,
+        "sore_throat": 1.0,
+        "fatigue": 2.0
+    },
+    "severity_multipliers": {
+        "mild": 1.0,
+        "moderate": 1.5,
+        "severe": 2.0
+    },
+    "critical_rules": [
+        ["chest_pain", "shortness_of_breath"],
+        ["shortness_of_breath", "severe"]
+    ],
+    "triage_thresholds": {
+        "low_risk": 5.0,
+        "medium_risk": 15.0
+    },
+    "recommendations": {
+        "LOW": "Self-care and monitor symptoms. Contact a doctor if symptoms worsen.",
+        "MEDIUM": "Schedule a routine appointment with your primary care physician soon.",
+        "HIGH": "Seek immediate medical attention (Emergency Room or Urgent Care)."
+    }
+}

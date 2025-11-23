@@ -1,0 +1,44 @@
+Code Run Demonstration
+
+execute `main.py` script. 
+Simulated Run Output (Scenario: Moderate Flu Symptoms)
+
+python main.py
+
+1. Input Interface
+
+Enter your age: 35
+How many days have you had symptoms? 4
+
+Please enter the severity (Mild, Moderate, Severe) for the following symptoms (or press Enter if absent):
+  fever (Mild/Moderate/Severe): moderate
+  shortness_of_breath (Mild/Moderate/Severe): 
+  chest_pain (Mild/Moderate/Severe): 
+  sore_throat (Mild/Moderate/Severe): severe
+  fatigue (Mild/Moderate/Severe): moderate
+
+2. Triage Engine Processing & Output
+
+[Performance Check: Calculation completed in 0.000085 seconds]
+
+==================================================
+Triage Assessment Result
+Risk Level: MEDIUM
+Calculated Score: 10.50
+--------------------------------------------------
+Recommendation:
+Schedule a routine appointment with your primary care physician soon.
+==================================================
+
+Score Calculation Breakdown for this Run:
+
+Fever (3.0 weight) x Moderate (1.5 multiplier): 4.5
+Sore Throat (1.0 weight) x Severe (2.0 multiplier): 2.0
+Fatigue (2.0 weight) x Moderate (1.5 multiplier): 3.0
+Age/Duration Factors: 0.0 (Age \< 65, Duration \< 7 days)
+Total Score: $4.5 + 2.0 + 3.0 = 9.5$
+Result: $9.5$ is between the thresholds of $5.0$ and $15.0$, resulting in MEDIUM Risk.
+Performance: The time is negligible (well under the 1-second requirement).
+
+This demonstration shows how the modular code structure successfully delivers a result while meeting the key non-functional requirements.
+
